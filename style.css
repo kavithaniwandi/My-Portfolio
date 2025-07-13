@@ -582,23 +582,23 @@ span{
 }
 
 .projects-marquee {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   width: 100%;
   padding: 1rem 0;
+  scroll-behavior: smooth;
 }
 
 .projects-track {
   display: flex;
-  width: max-content;
-  flex-direction: row-reverse;
-  animation: scroll-left 25s linear infinite;
   gap: 2rem;
+  flex-direction: row;
 }
 
 .project-box {
   flex: 0 0 auto;
-  width: 350px;
-  height: 400px;
+  width: 300px;
+  height: 450px;
   background-color: var(--main-color);
   color: var(--bg-color);
   border-radius: 12px;
@@ -607,14 +607,27 @@ span{
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  font-family: sans-serif;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
 }
+
+
 
 .project-box h4 {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 2rem;
 }
+
+.project-box img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
 
 .project-box a {
   text-decoration: none;
@@ -635,10 +648,9 @@ span{
 
 .project-spacer {
   flex: 0 0 auto;
-  width: 100px; /* Adjust space between sets */
+  width: 100px; 
 }
 
-/* Scroll animation: visually left-to-right */
 @keyframes scroll-infinite {
   0% {
     transform: translateX(0%);
