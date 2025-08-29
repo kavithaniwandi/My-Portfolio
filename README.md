@@ -2,8 +2,6 @@
 
 https://kavithaniwandi.github.io/My-Portfolio/
 
-# Personal Portfolio
-
 This is my personal **portfolio website**, built using **HTML, CSS, and JavaScript**.  
 It showcases my skills, projects, certificates, and contact information in a clean and modern layout.  
 
